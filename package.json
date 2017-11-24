@@ -1,0 +1,33 @@
+{
+  "name": "coolstory-storage-service",
+  "version": "1.0.0",
+  "description": "API for telegram app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndkrikun/coolstory-storage-service.git"
+  },
+  "author": "n.krikun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndkrikun/coolstory-storage-service/issues"
+  },
+  "homepage": "https://github.com/ndkrikun/coolstory-storage-service#readme",
+  "devDependencies": {
+    "@types/mongodb": "^2.2.16",
+    "@types/mongoose": "^4.7.28",
+    "@types/node": "^8.0.53",
+    "express": "^4.16.2",
+    "import-export": "^1.0.1",
+    "nodemon": "^1.12.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.1"
+  },
+  "dependencies": {
+    "mongoose": "^4.13.5"
+  }
+}
