@@ -1,16 +1,7 @@
 import { model } from 'mongoose'
+import { requestMessage } from '../../libs/terminal-messages'
 
 const Game = model('Game')
-
-const requestMessage = (complete: Boolean, method: String, name: String) => console.log(`
-
-  ----------------------------------------------------------------------------
-
-  ${complete ? '<---' : '--->'} ${method} Request ${name}
-
-  ----------------------------------------------------------------------------
-
-`)
 
 export const allGames = (req, res) => {
   requestMessage(false, req.method, 'Read all games')

@@ -5,7 +5,8 @@ export interface ICharacterModel extends ICharacter, Document {}
 
 export const CharacterSchema: Schema = new Schema({
   name: String,
-  description: String
+  description: String,
+  img: String
 })
 
 export const Character: Model<ICharacterModel> = model<ICharacterModel>('Character', CharacterSchema)
