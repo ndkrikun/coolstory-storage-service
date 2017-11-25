@@ -1,12 +1,12 @@
 import { Document, Schema, Model, model } from 'mongoose'
-import { IState } from '../../interfaces/state'
+import { IGame } from '../../interfaces/game'
 
-export interface IStateModel extends IState, Document {
+export interface IGameModel extends IGame, Document {
   createdAt: Date;
   updatedAt: Date;
 }
 
-export const StateSchema: Schema = new Schema({
+export const GameSchema: Schema = new Schema({
   createdAt: Date,
   updatedAt: Date,
   users: Array,
@@ -15,7 +15,7 @@ export const StateSchema: Schema = new Schema({
   chatId: Number
 })
 
-StateSchema.pre('save', next => {
+GameSchema.pre('save', next => {
   let now = new Date()
   if (!this.createdAt) {
     this.createdAt = now
@@ -23,4 +23,4 @@ StateSchema.pre('save', next => {
   next()
 })
 
-export const State: Model<IStateModel> = model<IStateModel>('State', StateSchema)
+export const Game: Model<IGameModel> = model<IGameModel>('Game', GameSchema)

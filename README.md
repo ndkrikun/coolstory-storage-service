@@ -3,13 +3,13 @@
 
 ## Requests
 
-### /api/states
+### /api/games
 - GET (returns list of game states)
 
-### /api/state
-- POST (creates state, returns stateHashID)
+### /api/game
+- POST (creates state, returns gameHashId)
 
-### /api/state/:stateHashId
+### /api/game/:gameHashId
 - GET (returns game state)
 - PUT (updates game state, returns game state)
 - DELETE (removes game state, returns success message)

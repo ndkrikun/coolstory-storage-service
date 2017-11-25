@@ -1,6 +1,6 @@
 import { IUser } from './user'
 
-export interface IState {
+export interface IGame {
   users: IUser[];
   started: Boolean;
   stoped: Boolean;

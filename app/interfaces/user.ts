@@ -1,4 +1,4 @@
-export interface User {
+export interface IUser {
   id: Number;
   is_bot: Boolean;
   first_name: String;

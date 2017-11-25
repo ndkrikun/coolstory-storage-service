@@ -2,8 +2,8 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
-const State = require('./api/models/state-model')
-const setRoutes = require('./api/routes/state-routes')
+const Game = require('./api/models/game-model')
+const setRoutes = require('./api/routes/game-routes')
 
 const app = express()
 const port = process.env.PORT || 3000
