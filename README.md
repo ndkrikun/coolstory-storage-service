@@ -4,7 +4,7 @@
 ## Requests
 
 ### /api/games
-- GET (returns list of game states)
+- GET (returns game state)
 
 ### /api/game
 - POST (creates state, returns gameHashId)

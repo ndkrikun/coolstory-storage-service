@@ -13,7 +13,6 @@ export const createGame = (req, res) => {
   const newGame = new Game(req.body)
 
   console.log(
-    req.body,
     newGame
   )
 
@@ -24,10 +23,7 @@ export const createGame = (req, res) => {
   } else {
     newGame.save((err, game) => {
       err && res.send(err)
-      res.json({
-        id: game._id,
-        message: 'Game successfully created'
-      })
+      res.json(game)
     })
   }
 }
