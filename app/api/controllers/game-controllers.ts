@@ -12,10 +12,6 @@ export const allGames = (req, res) => {
 export const createGame = (req, res) => {
   const newGame = new Game(req.body)
 
-  console.log(
-    newGame
-  )
-
   if (Object.keys(req.body).length === 0) {
     res.json({
       message: 'Failed to save the game. Empty body'
