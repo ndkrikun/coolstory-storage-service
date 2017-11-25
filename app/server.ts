@@ -1,16 +1,23 @@
-// import { sum } from './calc';
+const express = require('express')
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 
-// const numbersToAdd = [ 3, 4, 10, 2];
-// const result = sum(numbersToAdd)
-// console.log(`The result is: ${result}`)
-
-import * as express from 'express';
+const State = require('./api/models/state-model')
+const routes = require('./api/routes/state-route')
+// import { routes } from './api/routes/state-route'
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
+const DB = 'mongodb://localhost:27017/GameDB'
+
+mongoose.Promise = global.Promise;
+mongoose.connect(DB)
+
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+
+routes(app)
 
 app.listen(port, () =>
-  console.log(`Express server listening on port ${port}`)
+  console.log(`RESTful API server started on ${port}`)
 );
-
-import './api/models/gameStateModel'

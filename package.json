@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/ndkrikun/coolstory-storage-service#readme",
   "devDependencies": {
+    "@types/body-parser": "1.16.4",
     "@types/mongodb": "^2.2.16",
     "@types/mongoose": "^4.7.28",
+    "@types/express": "^4.0.36",
     "@types/node": "^8.0.53",
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "import-export": "^1.0.1",
     "nodemon": "^1.12.1",
