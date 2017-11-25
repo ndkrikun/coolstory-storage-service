@@ -11,12 +11,9 @@ export const allStates = (req, res) => {
 
 export const createState = (req, res) => {
   const newState = new State(req.body)
-
-  console.log(req.body);
   newState.save((err, state) => {
     err && res.send(err)
-    err && res.send(err)
-    res.json(state)
+    res.json(state._id)
   })
 }
 
@@ -35,9 +32,9 @@ export const updateState = (req, res) => {
     { _id: req.params.gameId },
     req.body,
     { new: true }, 
-    (err, task) => {
+    (err, state) => {
       err && res.send(err)
-      res.json(task)
+      res.json(state)
     }
   )
 }
