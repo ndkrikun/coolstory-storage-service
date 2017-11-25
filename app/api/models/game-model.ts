@@ -7,12 +7,10 @@ export interface IGameModel extends IGame, Document {
 }
 
 export const GameSchema: Schema = new Schema({
-  createdAt: Date,
-  updatedAt: Date,
-  users: Array,
+  chatId: Number,
   started: Boolean,
-  stoped: Boolean,
-  chatId: Number
+  stopped: Boolean,
+  players: Array
 })
 
 GameSchema.pre('save', next => {
@@ -20,6 +18,7 @@ GameSchema.pre('save', next => {
   if (!this.createdAt) {
     this.createdAt = now
   }
+  this.updatedAt = now;
   next()
 })
 

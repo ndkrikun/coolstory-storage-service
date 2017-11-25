@@ -1,4 +1,4 @@
-export interface IUser {
+export interface IPlayer {
   id: Number;
   is_bot: Boolean;
   first_name: String;

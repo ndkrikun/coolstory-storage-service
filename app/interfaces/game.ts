@@ -1,7 +1,7 @@
-import { IUser } from './user'
+import { IPlayer } from './player'
 
 export interface IGame {
-  users: IUser[];
+  players: IPlayer[];
   started: Boolean;
   stoped: Boolean;
   chatId: Number;

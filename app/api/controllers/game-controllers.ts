@@ -11,13 +11,25 @@ export const allGames = (req, res) => {
 
 export const createGame = (req, res) => {
   const newGame = new Game(req.body)
-  newGame.save((err, game) => {
-    err && res.send(err)
+
+  console.log(
+    req.body,
+    newGame
+  )
+
+  if (Object.keys(req.body).length === 0) {
     res.json({
-      id: game._id,
-      message: 'Game successfully created'
+      message: 'Failed to save the game. Empty body'
     })
-  })
+  } else {
+    newGame.save((err, game) => {
+      err && res.send(err)
+      res.json({
+        id: game._id,
+        message: 'Game successfully created'
+      })
+    })
+  }
 }
 
 export const readGame = (req, res) => {
