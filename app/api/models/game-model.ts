@@ -10,7 +10,8 @@ export const GameSchema: Schema = new Schema({
   chatId: Number,
   started: Boolean,
   stopped: Boolean,
-  players: Array
+  players: Array,
+  turns: Object
 })
 
 GameSchema.pre('save', next => {
