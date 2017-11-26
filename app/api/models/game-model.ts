@@ -11,7 +11,9 @@ export const GameSchema: Schema = new Schema({
   started: Boolean,
   stopped: Boolean,
   players: Array,
-  turns: Object
+  turns: Object,
+  minus: Number,
+  plus: Number
 })
 
 GameSchema.pre('save', next => {
